@@ -11,6 +11,8 @@
 Creating app... done, ⬢ evening-scrubland-89876
 https://evening-scrubland-89876.herokuapp.com/ | https://git.heroku.com/evening-scrubland-89876.git
 
+heroku create `<project-name>`  
+
 `$ git push heroku master`  
 The application is now deployed. Ensure that at least one instance of the app is running:  
 `$ heroku ps:scale web=1`  
@@ -28,6 +30,27 @@ Run the app locally
 `$ heroku local web`  
 http://localhost:5000/
 
+## Deploy using Heroku Git
+
+Install the Heroku CLI
+`$ heroku login`
+
+Create a new Git repository
+`$ cd my-project/`  
+`$ git init`  
+`$ heroku git:remote -a vue-ele-server` 
+
+`$ git add .`  
+`$ git commit -am "make it better"`  
+`$ git push heroku master`  
+
+ex: https://vue-ele-server.herokuapp.com/api/seller
+
+## Access-Control-Allow-Origin
+
+Access to XMLHttpRequest at 'https://vue-ele-server.herokuapp.com/api/seller' from origin 'https://jacobhsu.github.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.  
+
+npm `cors`  
 
 ## references
 
